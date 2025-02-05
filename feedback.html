@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>FeedBack</title>
+<style>
+	h2{
+	color:Blue;
+	    }
+
+	body{
+	color:Green;
+	border-style: solid;
+	border-color: red;
+	        }
+
+	marquee{
+	color:Orange;
+	              }
+
+	a{
+	cursor: pointer;
+	  }
+ 
+	.topnav {
+	  overflow: hidden;
+  	background-color: #333;
+	  }
+
+	.topnav a {
+	  float: left;
+  	color: #f2f2f2;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;	
+	font-size: 17px;
+	}
+
+	.topnav a:hover {
+  	background-color: skyblue;
+  	color: black;
+	 }
+
+	.topnav a.active {
+  	background-color: #4CAF50;
+  	color: white;
+	 }
+	
+	h3{
+	color:red;	
+	}
+
+	p{
+	color:voilet;
+	}
+
+</style>
+
+<script>
+	function open_Fd()
+	{
+		var a = document.forms["FdForm"]["Email"].value;
+ 		 if (a == "") 
+		{
+   		 alert("Email must be filled out");
+    		return false;
+  		}
+
+		var b = document.forms["FdForm"]["Password"].value;
+ 		 if (b == "") 
+		{
+   		 alert("Password must be filled out");
+    		return false;
+  		}
+		
+		var c = document.forms["FdForm"]["Feedback"].value;
+ 		 if (c == "") 
+		{
+   		 alert("FeedBack must be filled out");
+    		return false;
+  		}
+		
+		if(FdForm.Password.value.length < 6) {
+       		alert("Password must contain at least six characters!");
+        		FdForm.Password.focus();
+        		return false;
+      		}
+		
+		open("Fd.html");
+		close("feedback.html");
+	}
+</script>
+</head>
+<body bgcolor="#E6E6FA">
+	<image src="wwe.jpg" alt="Image not available" height="200" width="1328">
+		<h4><div class="topnav">
+		<a href="home.html">Home</a> 
+		<a href="about_us.html">About_Us</a> 
+		<a href="Superstars.html">Superstars</a> 
+		<a href="reg.html">Registration</a> 
+		<a href="Contact_us.html">Contact_Us</a> 
+		<a class="active" href="feedback.html">FeedBack</a></h4>	
+<fieldset>
+	<h2>* <u>FeedBacks</u> *</h2><hr>
+<h3>John Cena</h3>
+<p><blockquote>
+Seriously, I grew up a fan of Hulk Hogan, and I think I bring some of his best values to the ring... the values of a superhero. Always do your best. Never give up... I think kids want to believe in that, and they should believe in that.<br>
+My favorite thing about Saturday Night’s Main Event, it was that one time where I could stay up late with my dad and four brothers, and we would all beat the tar out of each other while the show was on, and it was all okay because my dad was a wrestling fan. When my job isn't performing in a WWE ring, my job is to get back performing in that ring. When I'm hurt, all I have to do all day is get strong and get better. I'm a very dedicated physical therapy patient, and that helps a lot.</blockquote></p><hr>
+
+<h3>Roman Reigns</h3>
+<p><blockquote>
+'WrestleMania' was the best day of my life, the greatest opportunity I've ever been afforded, but at the same time, no one wants to lose the main event for the WWE world heavyweight championship.Don't focus on the negativity. Focus on the positivity and the people that want you to do well; then, do it for them and for yourself. <br>
+Sometimes I do things for myself. Sometimes I do things for my family. Sometimes I do things for my friends.A lot of people tune in to 'Monday Night Raw,' and they can hear these boos or these mixed reactions, but they're not there for our Friday live event show, our Saturday show, our Sunday show. I get to experience a lot of very supportive nights where everybody is on my side.</blockquote></p><hr>
+
+<h3>Seth Rollins</h3>
+<p><blockquote>
+At the end of the day, I want to be my own person, I want to be my own performer, and I want to have a finisher that's synonymous with me and not with my mentor.I am determined and never give up. Ever. I always do my best.<br>
+In life, if you're not learning from every experience, even the bad ones, you're really messing up. That's the marker of a smart, intelligent individual.Ever since I was 3 years old, I wanted to be WWE champion. I got that belt during WrestleMania 31, and I want it back. It's what drives me.</blockquote>
+</p><hr>
+
+<h3>Finn Balor</h3>
+<p><blockquote>
+To go from a small wrestling school to the Performance Center was just mind-blowing. I didn't think anything like that could possibly exist. 2018 was an incredible year for me. I won the WWE Universal Championship and Intercontinental Championship.<br>
+The Demon character is something I draw on occasion. It's something that requires a lot of focus to tap into and really requires the right situation for me to sort of draw on that darker side of my personality.There wasn't one defining moment that I said, 'I wanna be a wrestler.' It was just something that was always inside me.</blockquote>
+</p><hr>
+
+<h3>Randy Orton</h3>
+<p><blockquote>
+I rose to the top real quick, and I was surrounded by Triple H, Ric Flair, Shawn Michaels, Undertaker, these guys who were very well respected in the profession, and they wanted to work with me, so I knew I was doing something right.<br>
+We have the freedom of speech. We are able to hold hands in protest and stand up for what we believe in and have people hear what you have to say.I was even more of a fan of Jake The Snake than I was of my dad when I was a kid, and that's because of the snake. Jake used to have his snake, Damien, out in the locker room slithering around the showers. In the locker room, they would actually block off one of the showers just so Damien could roll around, and I'd sit there and watch him.</blockquote>
+</p>
+</fieldset>
+<br><br>
+
+<fieldset><h2>* <u>FeedBack Form</u> *</h2><hr>
+<h4>
+<form name="FdForm" action="server url" onsubmit="return open_Fd()" method="post">
+<label for="Email"></Label>
+*Email :-----------------------<input type="Email" name="Email" id="Email" placeholder="email" ><br/><br>
+
+<label for="Password"></Label>
+*Password :------------------<input type="Password" name="Password" id="Password" placeholder="Password"><br/><br>
+
+Feedback :-------------------<textarea name="Feedback" rows="4" cols="50"></textarea><br><br>
+
+Description :-----------------<textarea rows="4" cols="50"></textarea><br><br>
+
+Suggestion :------------------<textarea rows="4" cols="50"></textarea><br><br>
+
+<input type="Submit">
+
+</fieldset></h4>
+
+<marquee direction="right">Submit Your FeedBack Here......</marquee>	
+	
+</body>
+</html>
